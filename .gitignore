@@ -1,0 +1,8 @@
+# Local outreach templates (keep private, do not publish on GitHub/Vercel)
+SHARE_MESSAGES.md
+
+# Vercel CLI / local exports / OS junk
+.vercel
+*.pdf
+.DS_Store
+Thumbs.db

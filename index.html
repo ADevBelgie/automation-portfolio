@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arthur Devresse — Practical AI &amp; Workflow Automation</title>
+    <meta
+      name="description"
+      content="Real examples of business automation, data-to-invoice tools, and quiet background workflows built in days or weeks."
+    />
+    <meta name="author" content="Arthur Devresse" />
+    <meta name="theme-color" content="#f6f1e7" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#15130f" media="(prefers-color-scheme: dark)" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Arthur Devresse — Practical AI &amp; Workflow Automation" />
+    <meta
+      property="og:description"
+      content="Real examples of business automation, data-to-invoice tools, and quiet background workflows built in days or weeks."
+    />
+    <meta property="og:image" content="./og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Arthur Devresse — Custom automation used to take months. Not anymore."
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Arthur Devresse — Practical AI &amp; Workflow Automation" />
+    <meta
+      name="twitter:description"
+      content="Real examples of business automation, data-to-invoice tools, and quiet background workflows built in days or weeks."
+    />
+    <meta name="twitter:image" content="./og.png" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="preload" href="./fonts/newsreader-roman.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="./fonts/ibm-plex-sans-400.woff2" as="font" type="font/woff2" crossorigin />
+    <script>
+      try {
+        var t = localStorage.getItem('ap-theme');
+        if (t === 'light' || t === 'dark') {
+          document.documentElement.setAttribute('data-theme', t);
+        }
+      } catch (e) {}
+    </script>
+    <link rel="stylesheet" href="./fonts.css" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main" data-i18n="skip_link">Skip to content</a>
+
+    <header class="topbar">
+      <div class="topbar__inner">
+        <div class="topbar__left">
+          <div class="topbar__brand">
+            <a class="topbar__name" href="#top">Arthur Devresse</a>
+          </div>
+          <a class="topbar__contact" href="#start-heading" data-i18n="topbar_contact">Contact</a>
+        </div>
+
+        <div class="topbar__controls">
+          <div class="segmented" role="group" aria-label="Language" data-i18n-aria="lang_group_aria">
+            <button type="button" id="lang-nl" data-lang="nl" aria-pressed="false">NL</button>
+            <button type="button" id="lang-fr" data-lang="fr" aria-pressed="false">FR</button>
+            <button type="button" id="lang-en" data-lang="en" class="is-active" aria-pressed="true">EN</button>
+          </div>
+
+          <button
+            type="button"
+            class="pdf-btn"
+            id="pdf-btn"
+            aria-label="Save or print as A4 PDF"
+            title="Open Print dialog to save as A4 PDF"
+            data-i18n-aria="pdf_btn_aria"
+            data-i18n-title="pdf_btn_title"
+          >
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M6 9V2h12v7" />
+              <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
+              <rect x="6" y="14" width="12" height="8" />
+            </svg>
+            <span data-i18n="pdf_btn">PDF</span>
+          </button>
+
+          <button
+            type="button"
+            class="icon-btn"
+            id="theme-btn"
+            aria-label="Switch to dark theme"
+            title="Switch to dark theme"
+          >
+            <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <circle cx="12" cy="12" r="4" />
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+            </svg>
+            <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="page">
+      <section id="top" class="hero">
+        <div class="author-header">
+          <img
+            id="author-portrait"
+            class="author-portrait"
+            src="./portrait.jpg"
+            alt="Arthur Devresse"
+            width="60"
+            height="60"
+            loading="eager"
+            decoding="async"
+          />
+          <div>
+            <p class="author-header__name">Arthur Devresse</p>
+            <p class="author-header__role" data-i18n="author_role">Freelance automation developer · Belgium</p>
+          </div>
+        </div>
+
+        <h1 class="hero__title" data-i18n="hero_title">Custom automation used to take months. Not anymore.</h1>
+        <p class="hero__lead" data-i18n="hero_lead">
+          With modern AI engineering tools, one experienced builder can deliver in days or weeks what used to need an agency. I turn messy spreadsheets, repetitive checking, and inbox overload into quiet background tools.
+        </p>
+
+        <p class="hero__jump">
+          <a href="#start-heading">
+            <span data-i18n="hero_contact_cta">Have a task in mind? Jump to contact</span>
+            <svg class="down-arrow" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 5v14M5 12l7 7 7-7" />
+            </svg>
+          </a>
+        </p>
+
+        <div class="fact-strip">
+          <div class="fact-pill">
+            <span class="fact-pill__val" data-i18n="fact1_val">6–7 weeks</span>
+            <span class="fact-pill__label" data-i18n="fact1_label">From blank screen to live apps at My Mobility Budget Butler (MMBB)</span>
+          </div>
+          <div class="fact-pill">
+            <span class="fact-pill__val" data-i18n="fact2_val">1 weekend</span>
+            <span class="fact-pill__label" data-i18n="fact2_label">To research, design, and ship a live interactive web briefing</span>
+          </div>
+          <div class="fact-pill">
+            <span class="fact-pill__val" data-i18n="fact3_val">Under €0.50 / 1,000</span>
+            <span class="fact-pill__label" data-i18n="fact3_label">AI cost for automated receipt checks at MMBB, with hard budget caps</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="ideas-heading">
+        <header class="section__head">
+          <span class="section__num" data-i18n="ideas_num">01 · What I can automate for you</span>
+          <h2 id="ideas-heading" class="section__title" data-i18n="ideas_title">Have a recurring task like one of these?</h2>
+          <p class="section__sub" data-i18n="ideas_sub">
+            Pick one repetitive weekly or monthly task. That is usually the best place to start.
+          </p>
+        </header>
+
+        <div class="flow-box">
+          <p class="flow-box__caption" data-i18n="flow_caption">Example · Turning messy data into ready-to-send invoices</p>
+          <div class="flow-steps">
+            <div class="flow-step">
+              <span class="flow-step__tag" data-i18n="flow1_tag">1. Raw input</span>
+              <p class="flow-step__text" data-i18n="flow1_text">Messy Excel exports, time logs, or multi-rule pricing tables</p>
+            </div>
+            <div class="flow-arrow" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M13 5l7 7-7 7" />
+              </svg>
+            </div>
+            <div class="flow-step">
+              <span class="flow-step__tag" data-i18n="flow2_tag">2. Quiet check</span>
+              <p class="flow-step__text" data-i18n="flow2_text">Applies your rules, flags missing lines, calculates exact totals</p>
+            </div>
+            <div class="flow-arrow" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M13 5l7 7-7 7" />
+              </svg>
+            </div>
+            <div class="flow-step flow-step--final">
+              <span class="flow-step__tag" data-i18n="flow3_tag">3. Ready to send</span>
+              <p class="flow-step__text" data-i18n="flow3_text">Clean PDF invoices &amp; summary waiting for your 1-click sign-off</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ideas-grid">
+          <article class="idea-card">
+            <h3 class="idea-card__title">
+              <span class="idea-card__num" aria-hidden="true">01</span> <span data-i18n="idea1_title">Complex data to invoices &amp; reports</span>
+            </h3>
+            <p class="idea-card__body" data-i18n="idea1_body">
+              Turn multi-rule spreadsheets into checked PDF invoices, quotes, or client reports.
+            </p>
+          </article>
+
+          <article class="idea-card">
+            <h3 class="idea-card__title">
+              <span class="idea-card__num" aria-hidden="true">02</span> <span data-i18n="idea2_title">PDFs &amp; forms to clean systems</span>
+            </h3>
+            <p class="idea-card__body" data-i18n="idea2_body">
+              Rename and file incoming PDFs, and move key numbers straight into Excel or your CRM.
+            </p>
+          </article>
+
+          <article class="idea-card">
+            <h3 class="idea-card__title">
+              <span class="idea-card__num" aria-hidden="true">03</span> <span data-i18n="idea3_title">Cross-checking &amp; matching</span>
+            </h3>
+            <p class="idea-card__body" data-i18n="idea3_body">
+              Match payments against open invoices, or check submitted forms against contracts and rules.
+            </p>
+          </article>
+
+          <article class="idea-card">
+            <h3 class="idea-card__title">
+              <span class="idea-card__num" aria-hidden="true">04</span> <span data-i18n="idea4_title">Inbox triage &amp; draft replies</span>
+            </h3>
+            <p class="idea-card__body" data-i18n="idea4_body">
+              Sort shared inboxes, pull out attachments, and prepare NL/FR/EN draft replies from your guidelines.
+            </p>
+          </article>
+
+          <article class="idea-card">
+            <h3 class="idea-card__title">
+              <span class="idea-card__num" aria-hidden="true">05</span> <span data-i18n="idea5_title">Quiet daily watchdogs</span>
+            </h3>
+            <p class="idea-card__body" data-i18n="idea5_body">
+              Check websites, regulations, prices, or deadlines each morning and alert you only when something changes.
+            </p>
+          </article>
+
+          <article class="idea-card">
+            <h3 class="idea-card__title">
+              <span class="idea-card__num" aria-hidden="true">06</span> <span data-i18n="idea6_title">Clean web dashboards</span>
+            </h3>
+            <p class="idea-card__body" data-i18n="idea6_body">
+              Turn scattered tables or recurring updates into a simple, readable webpage for your team.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="proof-heading">
+        <header class="section__head">
+          <span class="section__num" data-i18n="proof_num">02 · Proven in practice</span>
+          <h2 id="proof-heading" class="section__title" data-i18n="proof_title">What I have already built and shipped</h2>
+          <p class="section__sub" data-i18n="proof_sub">
+            Real systems running in production, plus public web projects you can inspect right away.
+          </p>
+        </header>
+
+        <div class="sublabel">
+          <span data-i18n="mmbb_sublabel">My Mobility Budget Butler (MMBB) · Belgian Mobility Budget</span>
+          <span class="badge-live" data-i18n="mmbb_badge">Live in production</span>
+        </div>
+
+        <div class="proof-grid">
+          <article class="card">
+            <p class="card__eyebrow" data-i18n="mmbb1_eyebrow">Expense &amp; rule checking</p>
+            <h3 class="card__title" data-i18n="mmbb1_title">Automatic receipt &amp; distance checks</h3>
+            <p class="card__body" data-i18n="mmbb1_body">
+              Reads uploaded expense PDFs and photos, checks company and legal rules (even measuring real walking distances via Google Maps), auto-approves clear claims, and routes only rejections or edge cases to staff.
+            </p>
+          </article>
+
+          <article class="card">
+            <p class="card__eyebrow" data-i18n="mmbb2_eyebrow">Paperwork &amp; CRM entry</p>
+            <h3 class="card__title" data-i18n="mmbb2_title">Document sorting &amp; extraction</h3>
+            <p class="card__body" data-i18n="mmbb2_body">
+              Recognizes incoming contracts and payment proofs, renames and files the PDFs cleanly, pulls out key figures (who paid whom, how much, when), and updates the CRM automatically.
+            </p>
+          </article>
+
+          <article class="card">
+            <p class="card__eyebrow" data-i18n="mmbb3_eyebrow">Complex rule comparison</p>
+            <h3 class="card__title" data-i18n="mmbb3_title">Annual renewal cross-checks</h3>
+            <p class="card__body" data-i18n="mmbb3_body">
+              Compares new annual submissions against past contracts, payment dates, and legal ceilings. Exact matches are approved automatically; mismatches go to staff with a clear explanation.
+            </p>
+          </article>
+
+          <article class="card">
+            <p class="card__eyebrow" data-i18n="mmbb4_eyebrow">Inbox &amp; support co-pilot · 6 weeks</p>
+            <h3 class="card__title" data-i18n="mmbb4_title">Internal assistant “Nestor” (NL / FR / EN)</h3>
+            <p class="card__body" data-i18n="mmbb4_body">
+              Combines company manuals with a customer's file and email history to answer tricky team questions and prepare draft replies in Dutch, French, and English.
+            </p>
+          </article>
+
+          <article class="card card--span2">
+            <p class="card__eyebrow" data-i18n="mmbb5_eyebrow">Compliance monitoring · 7 weeks</p>
+            <h3 class="card__title" data-i18n="mmbb5_title">Daily Belgian-law watchdog</h3>
+            <p class="card__body" data-i18n="mmbb5_body">
+              Checks 6 official Belgian legal and government websites every morning at 06:00. Stays completely silent on quiet days; the moment a relevant law or rule changes, it explains which business rules are affected and drafts the required updates.
+            </p>
+          </article>
+        </div>
+
+        <article class="feature-card">
+          <div class="feature-card__head">
+            <p class="card__eyebrow" data-i18n="public_eyebrow">Public web briefing · Built in 1 weekend (Nov 2026)</p>
+            <h3 class="feature-card__title" data-i18n="public_title">Already Past Us: live example of build speed</h3>
+            <span class="print-only-url">already-past-us.vercel.app</span>
+          </div>
+          <p class="card__body" data-i18n="public_body">
+            An interactive, cited research briefing with 8 custom charts on where AI outperforms humans and where it still falls short (roughly 4 in 5 real freelance jobs on its own). Built and shipped over one weekend.
+          </p>
+          <a
+            class="feature-card__cta"
+            id="already-past-us-link"
+            href="https://already-past-us.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span data-i18n="public_cta">Open live site</span>
+            <svg class="ext-arrow" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M7 17 17 7M7 7h10v10" />
+            </svg>
+          </a>
+          <div class="archive-row">
+            <span class="archive-row__label" data-i18n="archive_label">Earlier “State of AI” editions (public series):</span>
+            <span class="archive-links">
+              <a href="https://ai-strategic-report.vercel.app" target="_blank" rel="noopener noreferrer" data-i18n="archive_dec">Dec 2025</a>
+              <a href="https://ai-strategic-report-april-2026.vercel.app" target="_blank" rel="noopener noreferrer" data-i18n="archive_apr1">Apr 2026</a>
+              <a href="https://after-the-intelligence-flood.vercel.app" target="_blank" rel="noopener noreferrer" data-i18n="archive_apr2">Apr 2026 (Essay)</a>
+              <a href="https://measuring-the-end-of-measurement.vercel.app" target="_blank" rel="noopener noreferrer" data-i18n="archive_jul">Jul 2026</a>
+            </span>
+          </div>
+        </article>
+
+        <div class="guardrails">
+          <div>
+            <h3 class="guardrail__title" data-i18n="guard1_title">Routine automated, exceptions reviewed</h3>
+            <p class="guardrail__body" data-i18n="guard1_body">
+              At MMBB, clear claims are approved automatically while every rejection or edge case goes to a staff member. Draft emails stay drafts until someone sends them.
+            </p>
+          </div>
+          <div>
+            <h3 class="guardrail__title" data-i18n="guard2_title">Cents per case, not big bills</h3>
+            <p class="guardrail__body" data-i18n="guard2_body">
+              At MMBB, automated receipt checks cost under €0.50 per 1,000 tickets, and full AI support answers run around €0.01 each. Hard spending limits prevent surprises.
+            </p>
+          </div>
+          <div>
+            <h3 class="guardrail__title" data-i18n="guard3_title">Tested on past files first</h3>
+            <p class="guardrail__body" data-i18n="guard3_body">
+              Before anything goes live, we run it read-only on past files and compare its results against yours. Nothing touches live data until the answers match.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="start-heading">
+        <header class="section__head">
+          <span class="section__num" data-i18n="sec3_num">03 · Available for projects</span>
+          <h2 id="start-heading" class="section__title" data-i18n="sec3_title">Send me a short description of the task</h2>
+        </header>
+
+        <div class="cta-box">
+          <p class="card__body" data-i18n="cta_intro">
+            I take on freelance automation projects, big or small. Tell me about a repetitive task you do each week or month, and I'll tell you honestly if it's worth automating.
+          </p>
+
+          <div class="cta-box__steps">
+            <div class="cta-step">
+              <span class="cta-step__num" aria-hidden="true">01</span>
+              <p class="cta-step__text" data-i18n="step1_text">
+                Send me 3 short sentences on LinkedIn about a task you'd rather stop doing by hand.
+              </p>
+            </div>
+            <div class="cta-step">
+              <span class="cta-step__num" aria-hidden="true">02</span>
+              <p class="cta-step__text" data-i18n="step2_text">
+                You get an honest yes/no on whether automation saves real time, or if a simpler fix works better.
+              </p>
+            </div>
+            <div class="cta-step">
+              <span class="cta-step__num" aria-hidden="true">03</span>
+              <p class="cta-step__text" data-i18n="step3_text">
+                We test a small, safe first version on real examples before turning anything on.
+              </p>
+            </div>
+          </div>
+
+          <div class="cta-actions">
+            <a
+              class="btn-primary"
+              id="linkedin-cta"
+              href="https://www.linkedin.com/in/arthur-devresse/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span data-i18n="linkedin_cta">Message me on LinkedIn</span>
+              <svg class="ext-arrow" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M7 17 17 7M7 7h10v10" />
+              </svg>
+            </a>
+
+            <a class="btn-secondary" id="email-cta" href="#" hidden></a>
+
+            <div class="cta-secondary-links">
+              <a id="github-link" href="https://github.com/ADevBelgie" target="_blank" rel="noopener noreferrer" data-i18n="github_link">GitHub (ADevBelgie)</a>
+              <a id="apu-secondary-link" href="https://already-past-us.vercel.app/" target="_blank" rel="noopener noreferrer" data-i18n="apu_link">already-past-us.vercel.app</a>
+            </div>
+          </div>
+
+          <p class="print-meta">
+            <span class="print-meta__item">LinkedIn: <span id="print-linkedin-url">https://www.linkedin.com/in/arthur-devresse/</span></span>
+            <span class="print-meta__item" id="print-email-item" hidden>Email: <span id="print-email-val"></span></span>
+            <span class="print-meta__item">GitHub: https://github.com/ADevBelgie</span>
+            <span class="print-meta__item">Already Past Us: https://already-past-us.vercel.app/</span>
+          </p>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <span>Arthur Devresse</span>
+        <span data-i18n="footer_note">Freelance in Belgium · Practical automation.</span>
+      </footer>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
