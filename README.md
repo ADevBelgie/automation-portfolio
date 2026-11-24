@@ -23,6 +23,5 @@ You can also link straight to a specific language with `?lang=nl`, `?lang=fr`, o
 3. Click **PDF** (or press `Ctrl+P`) -> **Save as PDF**, A4, margins **Default** (or **Minimum**).
 4. **Uncheck** *Headers and footers* so Chrome's `file:///` path doesn't overlap the custom bottom page numbers, and check **Background graphics** if you want the subtle paper tint on cards.
 
-## 4. Before deploying to Vercel
-1. Replace the relative `./og.png` paths in `index.html` (`og:image` and `twitter:image`) with your full `https://<your-domain>/og.png` URL and add `<meta property="og:url" content="https://<your-domain>/" />` so LinkedIn and WhatsApp scrapers show the preview card reliably.
-2. Import this folder in Vercel with Framework Preset = **Other** and Output Directory = `.` (or run `npx vercel` inside this directory).
+## 4. Live deployment
+Live at https://arthur-devresse.vercel.app/ (auto-deployed from `main` via Vercel with Framework Preset = **Other** and Output Directory = `.`). Absolute `og:image`, `og:url`, `twitter:image`, and `canonical` URLs in `index.html` are configured for `https://arthur-devresse.vercel.app/`.
